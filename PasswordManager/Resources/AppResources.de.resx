@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="master_password_empty_alert" xml:space="preserve">
+		<value>Bitte geben Sie das Master-Passwort ein!</value>
+	</data>
+	<data name="password_placeholder" xml:space="preserve">
+		<value>Passwort</value>
+	</data>
+	<data name="confirm_password_placeholder" xml:space="preserve">
+		<value>Bestätige das Passwort</value>
+	</data>
+	<data name="set_password" xml:space="preserve">
+		<value>Passwort festlegen</value>
+	</data>
+	<data name="password_length_validation_error" xml:space="preserve">
+		<value>Muss mindestens 8 Zeichen lang sein!</value>
+	</data>
+	<data name="set_master_password_page_title" xml:space="preserve">
+		<value>Master-Passwort festlegen</value>
+	</data>
+	<data name="login_page_title" xml:space="preserve">
+		<value>Anmeldung</value>
+	</data>
+	<data name="login_page_info_title" xml:space="preserve">
+		<value>Login mit Master-Passwort</value>
+	</data>
+	<data name="wrong_password_alert" xml:space="preserve">
+		<value>Falsches Passwort!</value>
+	</data>
+	<data name="login_action_text" xml:space="preserve">
+		<value>Anmeldung</value>
+	</data>
+	<data name="login_item_website_name" xml:space="preserve">
+		<value>Webseiten-Name</value>
+	</data>
+	<data name="login_item_username" xml:space="preserve">
+		<value>Nutzername</value>
+	</data>
+	<data name="login_item_password" xml:space="preserve">
+		<value>Passwort</value>
+	</data>
+	<data name="login_item_url" xml:space="preserve">
+		<value>Url</value>
+	</data>
+	<data name="login_item_show_password" xml:space="preserve">
+		<value>Show</value>
+	</data>
+	<data name="website_name_empty_alert" xml:space="preserve">
+		<value>Bitte geben Sie den Namen der Website ein!</value>
+	</data>
+	<data name="website_url_empty_alert" xml:space="preserve">
+		<value>Bitte geben Sie die Website-URL ein!</value>
+	</data>
+	<data name="username_empty_alert" xml:space="preserve">
+		<value>Bitte geben Sie den Benutzernamen ein!</value>
+	</data>
+	<data name="password_empty_alert" xml:space="preserve">
+		<value>Bitte geben Sie das Passwort ein!</value>
+	</data>
+	<data name="login_account_title" xml:space="preserve">
+		<value>Konto</value>
+	</data>
+	<data name="save_login_item_button_text" xml:space="preserve">
+		<value>Speichern</value>
+	</data>
+	<data name="add_login_item_button_text" xml:space="preserve">
+		<value>Addieren</value>
+	</data>
+	<data name="account_list_page_title" xml:space="preserve">
+		<value>Konten</value>
+	</data>
+	<data name="account_details_edit_button_text" xml:space="preserve">
+		<value>Bearbeiten</value>
+	</data>
+	<data name="hide_password_text" xml:space="preserve">
+		<value>Ausblenden</value>
+	</data>
+	<data name="delete_account_details_text" xml:space="preserve">
+		<value>Löschen</value>
+	</data>
+	<data name="language_change_text" xml:space="preserve">
+		<value>Sprache</value>
+	</data>
+	<data name="cancel_text" xml:space="preserve">
+		<value>Abbrechen</value>
+	</data>
+	<data name="shared_unknown_error_message" xml:space="preserve">
+		<value>Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut.</value>
+	</data>
+	<data name="ok_btn_text" xml:space="preserve">
+		<value>OK</value>
+	</data>
+	<data name="alert_text" xml:space="preserve">
+		<value>Alarm</value>
+	</data>
+</root>

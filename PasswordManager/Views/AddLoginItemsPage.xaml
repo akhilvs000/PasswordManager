@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+  x:Class="PasswordManager.Views.AddLoginItemsPage"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:controls="clr-namespace:PasswordManager.Controls"
+  xmlns:converters="clr-namespace:PasswordManager.Converters;assembly=PasswordManager"
+  xmlns:views="clr-namespace:PasswordManager.Views;assembly=PasswordManager"
+  xmlns:vms="clr-namespace:PasswordManager.ViewModels;assembly=PasswordManager"
+  Title="{Binding Localization[login_account_title]}"
+  x:DataType="vms:AddLoginItemsPageViewModel">
+  <views:BaseContentPage.Resources>
+    <converters:NegateBooleanConverter x:Key="Inverter" />
+    <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter" />
+  </views:BaseContentPage.Resources>
+  <views:BaseContentPage.Content>
+    <ScrollView>
+      <Grid
+        Padding="12"
+        ColumnDefinitions="*,Auto"
+        ColumnSpacing="8"
+        HorizontalOptions="FillAndExpand"
+        RowDefinitions="Auto,20,40,Auto,20,40,Auto,20,40,Auto,20,40,Auto,30"
+        RowSpacing="8">
+        <Button
+          Grid.ColumnSpan="2"
+          Margin="8,0"
+          Padding="8,0"
+          Command="{Binding EditCommand}"
+          HeightRequest="30"
+          HorizontalOptions="End"
+          IsVisible="{Binding IsReadonlyMode}"
+          Style="{StaticResource ButtonStyle}"
+          Text="{Binding Localization[account_details_edit_button_text]}" />
+        <!--  website name section  -->
+        <Label
+          Grid.Row="1"
+          Grid.ColumnSpan="2"
+          Style="{StaticResource SubtitleStyle}"
+          Text="{Binding Localization[login_item_website_name]}" />
+        <controls:ValidationEntry
+          Grid.Row="2"
+          Grid.ColumnSpan="2"
+          HorizontalOptions="FillAndExpand"
+          IsEnabled="{Binding IsReadonlyMode, Converter={StaticResource Inverter}}"
+          Placeholder="{Binding Localization[login_item_website_name]}"
+          Style="{StaticResource NormalEntryStyle}"
+          Text="{Binding AccountDetails.WebsiteName}"
+          Validator="{Binding WebsiteNameValidator}" />
+        <Label
+          Grid.Row="3"
+          Grid.ColumnSpan="2"
+          IsVisible="{Binding WebsiteNameValidator.IsValid, Converter={StaticResource Inverter}}"
+          Style="{StaticResource ErrorStyle}"
+          Text="{Binding WebsiteNameValidator.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+          VerticalOptions="StartAndExpand" />
+        <!--  url section  -->
+        <Label
+          Grid.Row="4"
+          Grid.ColumnSpan="2"
+          Style="{StaticResource SubtitleStyle}"
+          Text="{Binding Localization[login_item_url]}" />
+        <controls:ValidationEntry
+          Grid.Row="5"
+          Grid.ColumnSpan="2"
+          IsEnabled="{Binding IsReadonlyMode, Converter={StaticResource Inverter}}"
+          Placeholder="{Binding Localization[login_item_url]}"
+          Style="{StaticResource NormalEntryStyle}"
+          Text="{Binding AccountDetails.WebsiteUrl}"
+          Validator="{Binding WebsiteUrlValidator}" />
+        <Label
+          Grid.Row="6"
+          Grid.ColumnSpan="2"
+          IsVisible="{Binding WebsiteUrlValidator.IsValid, Converter={StaticResource Inverter}}"
+          Style="{StaticResource ErrorStyle}"
+          Text="{Binding WebsiteUrlValidator.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+          VerticalOptions="StartAndExpand" />
+        <!--  username section  -->
+        <Label
+          Grid.Row="7"
+          Grid.ColumnSpan="2"
+          Style="{StaticResource SubtitleStyle}"
+          Text="{Binding Localization[login_item_username]}" />
+        <controls:ValidationEntry
+          Grid.Row="8"
+          Grid.ColumnSpan="2"
+          IsEnabled="{Binding IsReadonlyMode, Converter={StaticResource Inverter}}"
+          Placeholder="{Binding Localization[login_item_username]}"
+          Style="{StaticResource NormalEntryStyle}"
+          Text="{Binding AccountDetails.Username}"
+          Validator="{Binding UsernameValidator}" />
+        <Label
+          Grid.Row="9"
+          Grid.ColumnSpan="2"
+          IsVisible="{Binding UsernameValidator.IsValid, Converter={StaticResource Inverter}}"
+          Style="{StaticResource ErrorStyle}"
+          Text="{Binding UsernameValidator.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+          VerticalOptions="StartAndExpand" />
+        <!--  password section  -->
+        <Label
+          Grid.Row="10"
+          Grid.ColumnSpan="2"
+          Style="{StaticResource SubtitleStyle}"
+          Text="{Binding Localization[login_item_password]}" />
+        <controls:ValidationEntry
+          Grid.Row="11"
+          IsEnabled="{Binding IsReadonlyMode, Converter={StaticResource Inverter}}"
+          IsPassword="{Binding IsPassword}"
+          Placeholder="{Binding Localization[login_item_password]}"
+          Style="{StaticResource PasswordEntryStyle}"
+          Text="{Binding AccountDetails.Password}"
+          Validator="{Binding PasswordValidator}" />
+        <Button
+          Grid.Row="11"
+          Grid.Column="1"
+          Padding="8,0"
+          Command="{Binding ShoworHidePasswordCommand}"
+          HeightRequest="30"
+          Style="{StaticResource ButtonStyle}"
+          Text="{Binding Localization[login_item_show_password]}"
+          VerticalOptions="Center">
+          <Button.Triggers>
+            <DataTrigger
+              Binding="{Binding IsPassword}"
+              TargetType="Button"
+              Value="False">
+              <Setter Property="Text" Value="{Binding Localization[hide_password_text]}" />
+            </DataTrigger>
+          </Button.Triggers>
+        </Button>
+        <Label
+          Grid.Row="12"
+          Grid.ColumnSpan="2"
+          IsVisible="{Binding PasswordValidator.IsValid, Converter={StaticResource Inverter}}"
+          Style="{StaticResource ErrorStyle}"
+          Text="{Binding PasswordValidator.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+          VerticalOptions="StartAndExpand" />
+        <Button
+          Grid.Row="13"
+          Grid.ColumnSpan="2"
+          Padding="16,0"
+          Command="{Binding SaveAccountCommand}"
+          HorizontalOptions="CenterAndExpand"
+          IsVisible="{Binding IsReadonlyMode, Converter={StaticResource Inverter}}"
+          Style="{StaticResource ButtonStyle}"
+          Text="{Binding Localization[save_login_item_button_text]}"
+          VerticalOptions="Center" />
+        <Button
+          Grid.Row="13"
+          Grid.ColumnSpan="2"
+          Padding="16,0"
+          Command="{Binding DeleteAccountDetailsCommand}"
+          HorizontalOptions="CenterAndExpand"
+          IsVisible="{Binding IsReadonlyMode}"
+          Style="{StaticResource ButtonStyle}"
+          Text="{Binding Localization[delete_account_details_text]}"
+          VerticalOptions="Center" />
+
+      </Grid>
+    </ScrollView>
+  </views:BaseContentPage.Content>
+</views:BaseContentPage>

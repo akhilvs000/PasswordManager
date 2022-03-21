@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+  x:Class="PasswordManager.Views.LoginPage"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:controls="clr-namespace:PasswordManager.Controls"
+  xmlns:views="clr-namespace:PasswordManager.Views;assembly=PasswordManager"
+  xmlns:vms="clr-namespace:PasswordManager.ViewModels;assembly=PasswordManager"
+  Title="{Binding Localization[login_page_title]}"
+  x:DataType="vms:LoginPageViewModel">
+  <views:BaseContentPage.Content>
+    <StackLayout
+      Margin="0,40"
+      HorizontalOptions="Center"
+      Spacing="8"
+      VerticalOptions="StartAndExpand">
+      <Label
+        Padding="16,0,16,10"
+        HorizontalOptions="Center"
+        Style="{StaticResource ActionLabelStyle}"
+        Text="{Binding LanguageText}">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding ChangeLanguageCommand}" />
+        </Label.GestureRecognizers>
+      </Label>
+      <Label
+        Margin="20,0,20,20"
+        HorizontalOptions="CenterAndExpand"
+        Style="{StaticResource HeaderStyle}"
+        Text="{Binding Localization[login_page_info_title]}"
+        VerticalOptions="StartAndExpand" />
+      <controls:ValidationEntry
+        Placeholder="{Binding Localization[password_placeholder]}"
+        Style="{StaticResource PasswordEntryStyle}"
+        Text="{Binding Password}"
+        WidthRequest="200" />
+      <Label
+        IsVisible="{Binding IsWrongPasswordAlertVisible}"
+        Style="{StaticResource ErrorStyle}"
+        Text="{Binding Localization[wrong_password_alert]}"
+        VerticalOptions="StartAndExpand"
+        WidthRequest="200" />
+      <Button
+        Margin="0,20"
+        Padding="8"
+        Command="{Binding LoginCommand}"
+        Style="{StaticResource ButtonStyle}"
+        Text="{Binding Localization[login_action_text]}" />
+    </StackLayout>
+  </views:BaseContentPage.Content>
+</views:BaseContentPage>

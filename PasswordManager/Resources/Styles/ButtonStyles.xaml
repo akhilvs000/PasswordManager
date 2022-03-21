@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+  x:Class="PasswordManager.Resources.Styles.ButtonStyles"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:PasswordManager.Resources.Styles">
+  <ResourceDictionary.MergedDictionaries>
+    <local:Colors />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="ButtonStyle" TargetType="Button">
+    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+    <Setter Property="BackgroundColor" Value="{StaticResource GrayScaleColor}" />
+  </Style>
+  <Style x:Key="BackButtonStyle" TargetType="Button">
+    <Setter Property="FontSize" Value="30" />
+    <Setter Property="FontFamily" Value="Bold" />
+    <Setter Property="TextColor" Value="{StaticResource BlackHighEmphasisColor}" />
+    <Setter Property="BackgroundColor" Value="Transparent" />
+  </Style>
+  <Style x:Key="NavigationbarActionButtonStyle" TargetType="Button">
+    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+    <Setter Property="BackgroundColor" Value="Transparent" />
+  </Style>
+</ResourceDictionary>

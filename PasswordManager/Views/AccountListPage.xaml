@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+  x:Class="PasswordManager.Views.AccountListPage"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:ui="clr-namespace:PasswordManager.Models.UI;assembly=PasswordManager"
+  xmlns:views="clr-namespace:PasswordManager.Views;assembly=PasswordManager"
+  xmlns:vms="clr-namespace:PasswordManager.ViewModels;assembly=PasswordManager"
+  x:Name="root"
+  Title="{Binding Localization[account_list_page_title]}"
+  x:DataType="vms:AccountListPageViewModel">
+  <views:BaseContentPage.Resources>
+    <DataTemplate x:Key="accountListTemplate" x:DataType="ui:AccountDetails">
+      <StackLayout>
+        <Label
+          Padding="20,8"
+          HorizontalOptions="FillAndExpand"
+          LineBreakMode="WordWrap"
+          Style="{StaticResource HeaderStyle}"
+          Text="{Binding WebsiteName}">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding BindingContext.AccountItemTappedCommand, Source={x:Reference root}}" CommandParameter="{Binding .}" />
+          </Label.GestureRecognizers>
+        </Label>
+        <Line
+          Margin="8,0,0,0"
+          BackgroundColor="{StaticResource GrayScaleColor}"
+          HeightRequest="1" />
+      </StackLayout>
+    </DataTemplate>
+  </views:BaseContentPage.Resources>
+  <views:BaseContentPage.Content>
+    <StackLayout>
+      <Button
+        Margin="8"
+        Padding="8,0"
+        Command="{Binding AddLoginItemCommand}"
+        HeightRequest="30"
+        HorizontalOptions="End"
+        Style="{StaticResource ButtonStyle}"
+        Text="{Binding Localization[add_login_item_button_text]}"
+        VerticalOptions="Start" />
+      <CollectionView
+        ItemTemplate="{StaticResource accountListTemplate}"
+        ItemsSource="{Binding AccountDetailList}"
+        SelectionMode="None" />
+    </StackLayout>
+  </views:BaseContentPage.Content>
+</views:BaseContentPage>

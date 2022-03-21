@@ -1,0 +1,75 @@
+﻿<Properties StartupConfiguration="{AB4C2578-0C5E-4B70-9079-C2107842CEB3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PasswordManager/App.xaml">
+    <Files>
+      <File FileName="PasswordManager/Views/AccountListPage.xaml" Line="25" Column="14" />
+      <File FileName="PasswordManager/Views/BaseContentPage.xaml" />
+      <File FileName="PasswordManager/Views/LoginPage.xaml" />
+      <File FileName="PasswordManager/Views/SetMasterPasswordPage.xaml" />
+      <File FileName="PasswordManager/Views/AddLoginItemsPage.xaml" />
+      <File FileName="PasswordManager/App.xaml" Line="20" Column="23" />
+      <File FileName="PasswordManager/App.xaml.cs" />
+      <File FileName="PasswordManager/Resources/Styles/ButtonStyles.xaml" />
+      <File FileName="PasswordManager/Resources/Styles/Colors.xaml" />
+      <File FileName="PasswordManager/Resources/Styles/EntryStyles.xaml" />
+      <File FileName="PasswordManager/Resources/Styles/LabelStyles.xaml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PasswordManager" expanded="True">
+            <Node name="PasswordManager" expanded="True">
+              <Node name="Controls" expanded="True" />
+              <Node name="Converters" expanded="True" />
+              <Node name="Interfaces" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="VM" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="Entity" expanded="True" />
+                <Node name="UI" expanded="True" />
+                <Node name="Util" expanded="True" />
+              </Node>
+              <Node name="Resources" expanded="True">
+                <Node name="Styles" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="Infrastructure" expanded="True" />
+                <Node name="VM" expanded="True" />
+                <Node name="Wrapper" expanded="True" />
+              </Node>
+              <Node name="Validators" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AccountListPage.xaml" expanded="True" />
+                <Node name="SetMasterPasswordPage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" selected="True" />
+            </Node>
+            <Node name="PasswordManager.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="values" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="PasswordManager.iOS" expanded="True">
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PasswordManager.Android PreferredExecutionTarget="Android.pixel_2_q_10_0_-_api_29" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PasswordManager.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.678298C7-3ACA-4BDA-A448-AF4839D7325C" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/akhilvs/Projects/Interview/PasswordManager/PasswordManager/Controls/ValidatorEntry.cs" relfile="PasswordManager/Controls/ValidatorEntry.cs" line="32" column="1" />
+      <Breakpoint file="/Users/akhilvs/Projects/Interview/PasswordManager/PasswordManager/Controls/ValidatorEntry.cs" relfile="PasswordManager/Controls/ValidatorEntry.cs" line="14" column="1" />
+      <Breakpoint file="/Users/akhilvs/Projects/Interview/PasswordManager/PasswordManager/Services/VM/SetMasterPasswordPageVMService.cs" relfile="PasswordManager/Services/VM/SetMasterPasswordPageVMService.cs" line="38" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

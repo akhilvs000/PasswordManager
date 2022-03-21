@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+  x:Class="PasswordManager.Resources.Styles.LabelStyles"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:PasswordManager.Resources.Styles">
+  <ResourceDictionary.MergedDictionaries>
+    <local:Colors />
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="HeaderStyle" TargetType="Label">
+    <Setter Property="FontSize" Value="18" />
+    <Setter Property="FontAttributes" Value="Bold" />
+    <Setter Property="TextColor" Value="{StaticResource BlackHighEmphasisColor}" />
+  </Style>
+  <Style x:Key="ErrorStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="{StaticResource ErrorColor}" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+  <Style x:Key="SubtitleStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="{StaticResource BlackMediumEmphasisColor}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="LineBreakMode" Value="NoWrap" />
+    <Setter Property="FontAttributes" Value="Bold" />
+  </Style>
+  <Style x:Key="TitleStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="{StaticResource BlackHighEmphasisColor}" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="FontAttributes" Value="Bold" />
+  </Style>
+  <Style x:Key="ActionLabelStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="LineBreakMode" Value="NoWrap" />
+  </Style>
+</ResourceDictionary>
