@@ -28,4 +28,5 @@ This release intended to share a simple password manager app user to store a bas
 3. While app relaunch, it always ask for password to relogin, which trys to decrypt the dummy account with entered login password. If success, go to account list page, otherwise shows wrong password error
 4. While app comes from background state to foreground, Always ask to relogin
 5. Used AES algorithm for encryption
+6. UI designs are basic and did not focus on customising the views
  
